@@ -1,0 +1,50 @@
+.subscribe-block__submit {
+	font-family: @font_family($button_font_family);
+	font-weight: $button_font_weight;
+	color: $regular_button_text_color;
+	border-color: $regular_accent_color_1;
+	background-color: transparent;
+}
+
+.footer-full-width-area.widget-area .subscribe-block__input[type='email']{
+	border-bottom: 1px solid $regular_accent_color_1;
+}
+
+.subscribe-block__submit {
+	color: $invert_accent_color_1;
+	border-color: $regular_accent_color_1;
+	background-color: $regular_accent_color_1;
+}
+.subscribe-block__submit:hover {
+	color: $invert_accent_color_1;
+	border-color: $regular_link_hover_color;
+	background-color: $regular_link_hover_color;
+}
+
+.subscribe-block .widget-title{
+	font-size: $h3_font_size{px};
+	font-weight: $h3_font_weight;
+}
+
+.follow-block .menu-item a {
+	font-family: @font_family($button_font_family);
+	font-weight: $button_font_weight;
+	color: $regular_button_text_color;
+	border-color: $regular_accent_color_1;
+	background-color: transparent;
+}
+.follow-block .menu-item a:hover {
+	color: $invert_accent_color_1;
+	border-color: $regular_link_color;
+	background-color: $regular_link_color;
+}
+
+.follow-block .widget-title{
+	font-size: $h3_font_size{px};
+	font-weight: $h3_font_weight;
+}
+
+.sidebar-primary .subscribe-block__input[type='email'],
+.sidebar-secondary .subscribe-block__input[type='email']{
+	border-bottom: 1px solid $regular_accent_color_1;
+}

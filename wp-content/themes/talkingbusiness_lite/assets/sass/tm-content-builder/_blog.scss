@@ -1,0 +1,133 @@
+#tm_builder_outer_content {
+	.tm_pb_blog_grid_wrapper {
+		text-align: center;
+		.tm_pb_post {
+			.more-link{
+			    display: inline-block;
+			    padding: 25px 19px;
+			    &:hover{
+			    	padding: 25px 19px;
+			    }
+			}
+		}
+		h3.entry-title{
+			text-transform: none;
+    		margin-bottom: 23px;
+    		margin-top: 12px;
+    		line-height: 1.35;
+    		font-size: 24px;
+		}
+		.tm_pb_descr_container{
+			max-width: 100%;
+    		margin: 0 auto;
+			@media (min-width: 1200px) {
+				text-align:left;
+			}
+		}
+		.tm_pb_image_container {
+		    margin-bottom: 14px;
+		    a{
+		    	position: relative;
+		    	overflow: hidden;
+		    	&:before {
+						content: '';
+					    position: absolute;
+					    width: 0;
+					    height: 5px;
+					    top: 0;
+					    left: 50%;
+					    margin-left: 0;
+						@include transition(all 0.35s ease);
+					}
+
+					img{
+						@include transition(all 0.5s ease);
+						width: 100%;
+						background-size: cover;
+						background-position: center;
+					}
+				&:hover {
+					&:before {
+				    	width: 78px;
+					    margin-left: -36px;
+					}
+				}
+			}
+		
+		}
+		.tm_pb_post_content{
+			margin-bottom: 36px;
+		}
+		.tm_pb_post_meta{
+    		padding: 0;
+			position: relative;
+			.published{
+				display: block;
+			}
+			.author.vcard{
+    			padding-right: 13px;
+    			margin-right: 10px;
+    			position: relative;
+    			&:after{
+				    content: '';
+				    position: absolute;
+				    width: 3px;
+				    height: 3px;
+				    top: 6px;
+				    right: 0;	
+				    border-radius: 10px;
+    			}
+			}
+			.author.vcard, 
+			.comments{
+				@include font-size(0.875);
+    			font-weight: 400;
+				a{
+    				font-weight: 400;
+				}
+			}
+			span { 
+				@include font-size(0.875);
+    			font-weight: 400;
+			}
+		}
+	}
+}
+
+/* Posts */
+.tm-posts_title_divider{
+	display: none;
+}
+
+#tm_builder_outer_content .tm_pb_posts .tm_pb_ajax_more{
+    padding: 26px 17px;
+}
+
+#tm_builder_outer_content  .tm_pb_posts .tm-posts_item .btn{
+	border-radius: 24px;
+    padding: 9px 20px;
+	i{
+		display: none;
+	}
+}
+
+/* taxonomy */
+#tm_builder_outer_content .tm_pb_taxonomy {
+	img{
+		opacity: .2;
+		&:hover{
+			opacity: .2;
+		}
+	}
+	h6{
+		margin-bottom: 0;
+    	max-width: 60%;
+		@media (max-width: 1200px) {
+    		max-width: 100%;
+		}
+	}
+	.btn{
+		border-radius: 84px;
+    	padding: 31px 17px;
+	}
+}

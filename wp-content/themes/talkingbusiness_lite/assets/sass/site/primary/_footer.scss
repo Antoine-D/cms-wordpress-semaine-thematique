@@ -1,0 +1,81 @@
+.footer {
+	&-container {
+		@include font-size(0.9375);
+		margin: 18px 0 12px;
+		@include media-breakpoint-up(lg) {
+			padding: 10px 50px;
+		}
+
+		.container & {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+	&-copyright {
+		display: inline-block;
+		margin-bottom: 0.5em;
+	}
+	&-menu {
+		position: relative;
+		display: inline-block;
+		padding-left: 3px;
+		ul {
+			margin: 0;
+
+			li {
+				position: relative;
+				&:first-child{
+					a{
+						margin-left: 2px;
+						padding-left: 9px;
+					}
+					&:before{
+						content: '';
+						position: absolute;
+						top: 4px;
+						left: 0;
+						width: 1px;
+						height: 14px;
+					}
+				}
+
+				&:before {
+					content: '/';
+					margin: 0 2px 0 1px;
+				}
+			}
+		}
+	}
+	&-area.widget-area {
+		padding-top: 1.5em;
+		padding-bottom: 0;
+
+		@include media-breakpoint-up(md) {
+			padding-top: 1.5em;
+			padding-bottom: 0.2em;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: 2.5em;
+			padding-bottom: 1.2em;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-top: 5em;
+			padding-bottom: 6.3em;
+		}
+	}
+	&-full-width-area-wrap {
+		overflow: hidden;
+	}
+}
+
+.site-footer {
+	.footer-area-wrap, .footer-container {
+		@media (max-width: 544px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+}
+
+
+@import "footer/layout-default";

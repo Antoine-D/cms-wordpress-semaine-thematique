@@ -1,0 +1,74 @@
+.breadcrumbs {
+	position: relative;
+    margin: 0 0 60px;
+    padding: 0 0 37px;
+	border-bottom: 1px solid $color__hr;
+
+	@media (max-width: 768px) {
+    	padding: 25px 0;
+    	margin: 0 0 30px;
+	}
+
+	.home &{
+		position: relative;
+	    margin: 0;
+	    padding: 37px 0;
+		border-bottom: 1px solid $color__hr;
+		border-top: 1px solid $color__hr;
+
+		@media (max-width: 768px) {
+	    	padding: 25px 0;
+		}
+	}
+
+	&__title {
+		
+    	margin-top: 3px;
+		.page-title {
+			margin: 0;
+
+			&:after {
+				@media (max-width: 992px) {
+					content: '';
+					display: block;
+					width: 50px;
+					height: 1px;
+					margin: 0.5em 0;
+				}
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			border-bottom: none;
+			margin-right: 1.5em;
+			padding-right: 1.5em;
+
+			&:after {
+				content: none;
+			}
+		}
+	}
+	&__items {
+		float: left;
+	}
+	&__browse {
+		float: left;
+		margin-right: .5em;
+	}
+	&__wrap {
+		float: left;
+		margin: 0;
+		@include media-breakpoint-up(lg) {
+			margin: .25em 0;
+		}
+	}
+	&__item {
+		float: left;
+		&-sep {
+			margin: 0 .8em;
+		}
+		&-link {
+			text-decoration: none;
+		}
+	}
+}

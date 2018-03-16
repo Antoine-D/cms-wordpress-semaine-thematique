@@ -1,0 +1,191 @@
+#tm_builder_outer_content {
+
+	.tm_pb_custom_team_member.tm_pb_module,
+	.tm_pb_team_member.tm_pb_module  {
+		display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.tm_pb_team_member_image {
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			display: flex;
+			align-items: stretch;
+
+			.member_image{
+				@include transition(all 0.5s ease);
+				transform: scale(1);
+				width: 100%;
+				padding-bottom: 90%;
+				background-size: cover;
+				background-position: center;
+				@include media-breakpoint-up(lg) {
+					padding-bottom: 434px;
+				}
+			}
+		}
+		&:hover {
+			.tm_pb_team_member_image {
+				.member_image{
+					transform: scale(1.05);
+				}
+			}
+		}
+		&.position_top .tm_pb_team_member_wrap:before{
+			top: -27px;
+		    border-left: 28px solid transparent;
+		    border-right: 28px solid transparent;
+		    border-bottom: 28px solid;
+			@include transition(all 0.35s ease);
+		}
+		&.position_bottom .tm_pb_team_member_wrap:before{
+			bottom: -27px;
+		    border-left: 28px solid transparent;
+		    border-right: 28px solid transparent;
+		    border-top: 28px solid;
+			@include transition(all 0.35s ease);
+		}
+		.tm_pb_team_member_image{
+
+			@media (max-width: 1200px) {
+			    order: 0 !important;
+			    -ms-flex-order: 0 !important;
+			}
+		}
+		.tm_pb_team_member_wrap {
+			padding: 81px 73px 60px;
+    		min-height: 434px;
+			position: relative;
+			box-sizing: border-box;
+			@include transition(all 0.35s ease);
+			&:before{
+				content: "";
+				position: absolute;
+			    left: 50%;
+			    margin-left: -28px;
+			    width: 0px;
+			    height: 0px;
+			    z-index: 2;
+				@media (max-width: 1200px) {
+					display: none;
+				}
+			}
+
+			@media (max-width: 1730px) {
+				padding: 30px 40px;
+			}
+			@media (max-width: 1400px) {
+				padding: 18px 20px;
+    			min-height: 335px;
+			}
+			@media (max-width: 1200px) {
+				padding: 20px 20px;
+			}
+			@media (max-width: 992px) {
+				padding: 20px 15px;
+    			min-height: 290px;
+			}
+
+			@media (max-width: 544px) {
+    			min-height: auto;
+			}
+			
+			.tm_pb_team_member_description p{
+    			margin: 0 0 24px;
+			}
+
+			.tm_pb_team_member_name,.tm_pb_team_member_name a {
+				margin: 0 0 0.1em;
+				@include font-size(1.5);
+			}
+			.tm_pb_member_position {
+				margin: 0.2em 0 1.5em;
+				@include font-size(0.875);
+				text-transform: uppercase;
+			}
+			.tm_pb_member_social_links {
+				margin: 0;
+				li {
+					margin: 0 5px 5px 0;
+					padding: 0;
+					&:before{
+					 	display: none;
+					}
+					a {		
+						@include transition(all 0.3s ease);
+						display: block;
+						width: 33px;
+						height: 33px;
+						border-radius: 50%;
+						border: 2px solid;
+						text-align: center;
+						@include font-size(0.78);
+						line-height: 29px;
+					}
+					a span {	
+						@include font-size(0.78);	
+					}
+				}
+			}
+		}
+	}
+	@mixin team_member_img_top {
+		.tm_pb_team_member.tm_pb_module,
+		.tm_pb_custom_team_member.tm_pb_module {
+			flex-direction: column;
+			.tm_pb_team_member_image {
+				width: 100%;
+				display: block;
+				img{
+					width: 100%;
+				}
+			}
+			.tm_pb_team_member_wrap {
+				width: 100%;
+				.tm_pb_member_social_links{
+					 li {
+					    list-style: none;
+					    padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		@include team_member_img_top();
+	}
+
+	.col-xl-4, .col-xl-3,
+	.col-xl-2, .col-lg-2,
+	.col-md-2, .col-sm-2,
+	.col-lg-4, .col-lg-3,
+	.col-md-4, .col-md-3,
+	.col-sm-4, .col-sm-3{
+		@include team_member_img_top();
+	}
+	.col-xl-6, .col-lg-6, .col-md-6, .col-sm-6 {
+			@include team_member_img_top();
+	}
+	.col-xs-12 .col-sm-12 .col-md-12 .col-lg-12 .col-xl-12 {
+			@include team_member_img_top();
+	}
+}
+#tm_builder_outer_content .tm_pb_testimonial_portrait{
+	width: 150px;
+    height: 150px;
+}
+#tm_builder_outer_content .tm_pb_testimonial.tm_pb_testimonial_no_bg{
+	@include media-breakpoint-up(lg) {
+		padding:0;
+	}
+}

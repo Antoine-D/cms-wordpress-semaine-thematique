@@ -1,0 +1,65 @@
+.sticky {
+	display: block;
+	&__label {
+		line-height: 22px;
+		display: inline-block;
+		float: right;
+		padding: 0 10px;
+		text-align: center;
+		border-radius: 20px;
+		.material-icons,
+		.fa {
+			font-size: 21px;
+			line-height: 2;
+			display: block;
+			width: auto;
+			width: calc(2em - 20px);
+			height: 2em;
+			.posts-list & {
+				font-size: 21px;
+				color: inherit;
+			}
+		}
+		.has-post-thumbnail & {
+			position: absolute;
+			z-index: 99;
+			top: 10px;
+			right: 10px;
+			float: none;
+
+			@include media-breakpoint-up(lg) {
+				top: 30px;
+			}
+		}
+	}
+	&.posts-list__item {
+		.btn {
+			@include media-breakpoint-up(lg) {
+				.two-sidebars & {
+					padding: 0;
+				}
+			}
+			&__text {
+				@include media-breakpoint-up(lg) {
+					display: inline-block;
+				}
+				.two-sidebars & {
+					display: none;
+				}
+			}
+			&__icon,
+			.material-icons,
+			.fa {
+				@include media-breakpoint-up(lg) {
+					display: none;
+				}
+				.two-sidebars & {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.post-thumbnail__img {
+		width: 100%;
+	}
+}

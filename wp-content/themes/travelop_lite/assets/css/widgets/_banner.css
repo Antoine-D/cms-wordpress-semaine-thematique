@@ -1,0 +1,17 @@
+.widget-banner__link {
+  display: block;
+}
+
+.widget-banner__img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.sidebar-primary .widget.widget-banner,
+.sidebar-secondary .widget.widget-banner,
+.before-content-area .widget.widget-banner,
+.after-content-area .widget.widget-banner,
+.before-loop-area .widget.widget-banner,
+.after-loop-area .widget.widget-banner {
+  padding: 0;
+}

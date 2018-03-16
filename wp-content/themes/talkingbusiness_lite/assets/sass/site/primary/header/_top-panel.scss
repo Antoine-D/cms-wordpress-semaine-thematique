@@ -1,0 +1,82 @@
+.top-panel {
+	border-bottom: 1px solid $color__background-hr;
+	padding: 0 $grid-gutter-width/2  6px;
+	@include font-size(0.76);
+	font-weight: normal;
+	line-height: 1.333;
+	text-align: left;
+	.container & {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	&__wrap {
+		&:after {
+			display: block;
+			clear: both;
+			width: 100%;
+			content: '';
+		}
+	}
+	&__message {
+		padding: 0 0 10px;
+		@include media-breakpoint-up(md) {
+			padding: 0;
+			float: left;
+		}
+		.info-block {
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: 1.5em;
+			display: inline-block;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		.material-icons {
+			vertical-align: bottom;
+			@include font-size(1.25);
+			line-height: 1;
+		}
+	}
+	&__message + &__search {
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			height: 1px;
+			width: 300%;
+			left: -100%;
+			top: 0;
+		}
+		
+	}
+	&__search {
+		@include media-breakpoint-down(md) {
+		padding:0;
+		}
+		padding-top: 16px;
+		text-align: right;
+
+		@include media-breakpoint-up(md) {
+			float: right;
+			text-align: left;
+    		padding-top: 4px;
+		}
+	}
+}
+.site-header.centered .top-panel__search{
+	display: inline-block;
+    padding-top: 4px;
+    float: none;
+}
+.site-header.default .top-panel__search{
+	order: 1;
+}
+.home .site-header.transparent .top-panel__search{
+	@include media-breakpoint-only (md){
+	position:relative;
+	top:-120px;
+	}
+}

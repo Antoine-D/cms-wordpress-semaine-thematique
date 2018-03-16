@@ -1,0 +1,35 @@
+/* #Footer */
+.site-footer {
+	background-color: $footer_bg;
+}
+.site-footer p{
+	color: $invert_accent_color_3;
+}
+
+.footer-area-wrap {
+	background-color: $footer_widgets_bg;
+}
+.footer-area-wrap ul li a {
+	color: $regular_link_color;
+}
+.footer-area-wrap ul li a:hover {
+	color: $regular_link_hover_color;
+}
+#footer-navigation ul li a, .footer-menu ul li:before {
+	color: $invert_accent_color_1;
+}
+
+#footer-navigation ul li a:hover {
+	color: $regular_accent_color_1;
+}
+.site-info a:hover {
+	color: $regular_text_color;
+}
+
+.footer-full-width-area-wrap{
+	background: $invert_accent_color_2;
+}
+
+.footer-copyright{
+	color: $invert_accent_color_1;
+}

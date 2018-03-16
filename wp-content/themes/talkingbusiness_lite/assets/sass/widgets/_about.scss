@@ -1,0 +1,14 @@
+.widget-about {
+	.footer-area & {
+		margin-top: 15px;
+		@include media-breakpoint-up(xl) {
+			margin-top: 10px;
+		}
+	}
+	&__logo {
+		margin-bottom: 1.3em;
+	}
+	&__logo-img {
+		vertical-align: top;
+	}
+}

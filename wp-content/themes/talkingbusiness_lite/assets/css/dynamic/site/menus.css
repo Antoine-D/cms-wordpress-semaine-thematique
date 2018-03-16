@@ -1,0 +1,114 @@
+/* #Main Menu */
+.main-navigation li a {
+	font-style: $main_menu_font_style;
+	font-weight: $main_menu_font_weight;
+	font-size: $main_menu_font_size{px};
+	line-height: $main_menu_line_height;
+	font-family: @font_family( $main_menu_font_family );
+	letter-spacing: $main_menu_letter_spacing{px};
+	color: $header_text_color;
+	text-transform: capitalize;
+}
+
+.main-navigation .sub-menu li.menu-item-has-children::after{
+	color: $invert_accent_color_1;
+}
+
+.main-navigation .sub-menu a .menu-item__desc{
+	color: $invert_accent_color_1;
+}
+
+.main-navigation .menu > li > a:hover,
+.main-navigation .menu > li.menu-hover > a,
+.main-navigation .menu > li.current_page_item > a,
+.main-navigation .menu > li.current_page_ancestor > a,
+.main-navigation .menu > li.current-menu-item > a,
+.main-navigation .menu > li.current-menu-ancestor > a {
+
+}
+
+.main-navigation .menu .menu-item:first-child{
+	border-color: $header_text_color;
+}
+
+.main-navigation .sub-menu a {
+	color: $invert_accent_color_1;
+}
+.main-navigation .sub-menu li {
+	border-color: @lighten( $invert_accent_color_2, 20 );
+	background-color: @lighten( $regular_text_color, 9 );
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.05);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.05);
+}
+.main-navigation .sub-menu > li > a:hover,
+.main-navigation .sub-menu > li.menu-hover > a,
+.main-navigation .sub-menu > li.current_page_item > a,
+.main-navigation .sub-menu > li.current_page_ancestor > a,
+.main-navigation .sub-menu > li.current-menu-item > a,
+.main-navigation .sub-menu > li.current-menu-ancestor > a {
+	color: $regular_accent_color_1;
+}
+.main-navigation .sub-menu > li > ul{
+	color: $regular_text_color;
+}
+.menu-item__desc {
+	font-style: $body_font_style;
+	font-family: @font_family( $body_font_family );
+	color: $regular_text_color;
+}
+
+.menu-toggle {
+	font-style: $main_menu_font_style;
+	font-weight: $main_menu_font_weight;
+	font-family: @font_family( $main_menu_font_family );
+	color: $header_text_color;
+}
+
+.stuckMenu.isStuck {
+	background-color: $header_bg_color;
+	border-bottom: 1px solid $invert_accent_color_3;
+}
+
+@media screen and (max-width: 767px) {
+	.main-navigation .menu .menu-item,
+	.main-navigation .menu .menu-item .sub-menu {
+		border-color: $header_text_color;
+	}
+	.main-navigation .menu .menu-item .sub-menu .menu-item,
+	.main-navigation .menu .menu-item .sub-menu .sub-menu {
+		border-color: @alpha($header_text_color,10);
+	}
+	.main-navigation .menu .menu-item.menu-item-has-children .sub-menu-toggle:before{
+		color: $invert_h4_color;
+	}
+}
+
+/* #Footer Menu */
+.footer-menu ul li:first-child:before {
+	background-color: $invert_h6_color;
+}
+.footer-menu__items li {
+	color: $invert_accent_color_1;
+}
+.footer-menu__items li.current-menu-item a,
+.footer-menu__items li.current_page_item a,
+.footer-menu__items li a,
+.footer-menu__items li a {
+	color: $invert_accent_color_1;
+}
+.footer-menu__items li.current-menu-item a,
+.footer-menu__items li.current_page_item a {
+	color: $regular_link_hover_color;
+}
+.footer-menu__items li.current-menu-item a:hover,
+.footer-menu__items li.current_page_item a:hover,
+.footer-menu__items li a:hover,
+.footer-menu__items li a:hover {
+	color: $regular_link_hover_color;
+}
+.not-found h4{
+	color: $regular_accent_color_1;
+}
+.not-found .page-title{
+	color: $regular_accent_color_1;
+}
